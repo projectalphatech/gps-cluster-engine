@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📍 gps-cluster-engine
+# gps-cluster-engine
 
 **Group GPS points by proximity with capacity constraints.**
 
@@ -12,17 +12,17 @@
 
 > **DBSCAN dominates geospatial clustering** — and raw K-means is fundamentally incompatible with lat/lon coordinates. This engine uses Haversine-aware proximity clustering with capacity constraints.
 
-[Quick Start](#-quick-start) •
-[Demo](#-demo) •
-[How it works](#-how-it-works) •
-[API](#-api) •
-[Use cases](#-use-cases)
+[Quick Start](#quick-start) •
+[Demo](#demo) •
+[How it works](#how-it-works) •
+[API](#api) •
+[Use cases](#use-cases)
 
 </div>
 
 ---
 
-## 🤔 Why this exists
+## Why this exists
 
 You have 50 bookings. You have 3 buses with 14 seats each. How do you group them?
 
@@ -36,7 +36,7 @@ That's what this engine does.
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Status |
 |---|---|
@@ -49,7 +49,7 @@ That's what this engine does.
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install
 
@@ -83,7 +83,7 @@ console.log(clusters);
 
 ---
 
-## 📸 Demo
+## Demo
 
 ### Before (zone-based grouping)
 ```
@@ -104,7 +104,7 @@ Total distance: 5km — 82% reduction
 
 ---
 
-## 🏗️ How it works
+## How it works
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -146,7 +146,7 @@ Total distance: 5km — 82% reduction
 
 ---
 
-## 📚 API
+## API
 
 ### `clusterByProximity(points, options)`
 
@@ -187,7 +187,7 @@ interface Cluster {
 
 ---
 
-## 🔗 Related algorithms and tools
+## Related algorithms and tools
 
 | Tool | What it does | When to use |
 |---|---|---|
@@ -200,7 +200,7 @@ interface Cluster {
 
 ---
 
-## 🌍 Use cases
+## Use cases
 
 | Use case | How |
 |---|---|
@@ -212,7 +212,7 @@ interface Cluster {
 
 ---
 
-## 📋 FAQ
+## FAQ
 
 ### Can I use K-means instead?
 
@@ -220,7 +220,7 @@ interface Cluster {
 
 ---
 
-## 📄 License
+## License
 
 MIT © [Project Alpha Tech](https://projectalpha.tech)
 
