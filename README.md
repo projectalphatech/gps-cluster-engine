@@ -10,6 +10,8 @@
 
 *The algorithm behind dispatch logistics. Group nearby pickups. Respect bus capacity. Minimize total distance.*
 
+> **DBSCAN dominates geospatial clustering** — and raw K-means is fundamentally incompatible with lat/lon coordinates. This engine uses Haversine-aware proximity clustering with capacity constraints.
+
 [Quick Start](#-quick-start) •
 [Demo](#-demo) •
 [How it works](#-how-it-works) •
@@ -185,6 +187,19 @@ interface Cluster {
 
 ---
 
+## 🔗 Related algorithms and tools
+
+| Tool | What it does | When to use |
+|---|---|---|
+| **[DBSCAN](https://scikit-learn.org/stable/modules/clustering.html#dbscan)** | Density-based clustering, arbitrary shapes | Unknown number of clusters |
+| **[HDBSCAN](https://hdbscan.readthedocs.io/)** | Hierarchical DBSCAN, varying density | Clusters of different densities |
+| **[OR-Tools](https://developers.google.com/optimization/cp)** | Constraint-based vehicle routing | Capacity-constrained VRP |
+| **[scikit-learn](https://scikit-learn.org/stable/modules/clustering.html)** | General clustering toolkit | Quick prototyping |
+
+**Pattern:** For capacity-constrained vehicle routing problems (CVRP), use the **Cluster-First, Route-Second** approach — cluster nearby points with this engine, then solve each cluster as a separate routing problem with OR-Tools.
+
+---
+
 ## 🌍 Use cases
 
 | Use case | How |
@@ -194,6 +209,14 @@ interface Cluster {
 | **Ride-sharing** | Group passengers heading in the same direction |
 | **Field service** | Group nearby service calls for technician routes |
 | **Event transport** | Cluster attendee pickups for shuttle buses |
+
+---
+
+## 📋 FAQ
+
+### Can I use K-means instead?
+
+**No.** Raw K-means is incompatible with lat/lon coordinates — the mean of lat/lon pairs is not a valid geographic centroid. Use DBSCAN or Haversine-aware variants instead.
 
 ---
 
