@@ -1,0 +1,10 @@
+{
+  "name": "gps-cluster-engine",
+  "version": "1.0.0",
+  "description": "Group GPS points by proximity with capacity constraints. The algorithm behind dispatch logistics.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": ["src/"],
+  "license": "MIT",
+  "keywords": ["gps", "clustering", "logistics", "haversine", "algorithm", "typescript"]
+}
