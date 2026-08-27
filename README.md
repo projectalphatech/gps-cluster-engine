@@ -22,6 +22,19 @@
 
 ---
 
+## Install as a Claude Code skill
+
+```bash
+/add-plugin projectalphatech/gps-cluster-engine
+```
+
+Or manually:
+```bash
+git clone https://github.com/projectalphatech/gps-cluster-engine ~/.claude/skills/gps-cluster-engine
+```
+
+---
+
 ## Why this exists
 
 You have 50 bookings. You have 3 buses with 14 seats each. How do you group them?

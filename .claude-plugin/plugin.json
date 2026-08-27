@@ -1,0 +1,17 @@
+{
+  "name": "gps-cluster-engine",
+  "description": "Group GPS points by proximity with capacity constraints. The algorithm behind dispatch and logistics clustering \u2014 respects bus/vehicle capacity, minimizes total distance. Use when building dispatch systems, delivery route planning, or ride-sharing grouping. Documents why raw K-means on lat/lon is mathematically wrong.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Project Alpha Tech"
+  },
+  "homepage": "https://github.com/projectalphatech/gps-cluster-engine",
+  "license": "MIT",
+  "keywords": [
+    "gps",
+    "clustering",
+    "logistics",
+    "haversine",
+    "dispatch"
+  ]
+}
